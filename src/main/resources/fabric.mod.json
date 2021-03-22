@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "joebenite",
+  "version": "${version}",
+
+  "name": "Joebenite",
+  "description": "Adds the mighty joebenite ore to make super spicy gear!",
+  "authors": [
+    "Me!"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": ""
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/joebenite/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "joebenitus.joebenite.Joebenite"
+    ]
+  },
+  "mixins": [
+    "joebenite.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.7.4",
+    "fabric": "*",
+    "minecraft": "1.16.x"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
