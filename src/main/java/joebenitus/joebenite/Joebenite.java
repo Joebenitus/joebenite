@@ -34,7 +34,7 @@ public class Joebenite implements ModInitializer {
 
 	public static final Block JOEBENITE_ORE = new JoebeniteOreBlock(FabricBlockSettings.copy(Blocks.STONE));
 
-	public static final Item JOEBENITE_PICKAXE = new Item(new Item.Settings().group(ItemGroup.TOOLS));
+	//public static final Item JOEBENITE_PICKAXE = new Item(new Item.Settings().group(ItemGroup.TOOLS));
 
 	private static ConfiguredFeature<?, ?> JOEBENITE_ORE_OVERWORLD = Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, JOEBENITE_ORE.getDefaultState(), 4)).decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(0, 0, 20))).spreadHorizontally().repeat(1);
 
@@ -50,6 +50,10 @@ public class Joebenite implements ModInitializer {
 		//TOOLS
 
 		Registry.register(Registry.ITEM, new Identifier("joebenite", "joebenite_pickaxe"), new PickaxeBase(new ToolMaterialJoebenite()));
+		Registry.register(Registry.ITEM, new Identifier("joebenite", "joebenite_sword"), new SwordBase(new ToolMaterialJoebenite()));
+		Registry.register(Registry.ITEM, new Identifier("joebenite", "joebenite_axe"), new AxeBase(new ToolMaterialJoebenite()));
+		Registry.register(Registry.ITEM, new Identifier("joebenite", "joebenite_shovel"), new ShovelBase(new ToolMaterialJoebenite()));
+		Registry.register(Registry.ITEM, new Identifier("joebenite", "joebenite_hoe"), new HoeBase(new ToolMaterialJoebenite()));
 
 
 		RegistryKey<ConfiguredFeature<?,?>> joebeniteOreOverworld = RegistryKey.of(Registry.CONFIGURED_FEATURE_WORLDGEN, new Identifier("joebenite", "joebenite_ore"));

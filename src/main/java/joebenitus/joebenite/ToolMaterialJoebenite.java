@@ -25,7 +25,7 @@ public class ToolMaterialJoebenite implements ToolMaterial {
   @Override
   public int getMiningLevel() {
     // TODO Auto-generated method stub
-    return 0;
+    return 5;
   }
 
   @Override
