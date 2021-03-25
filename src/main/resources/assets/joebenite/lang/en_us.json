@@ -2,9 +2,15 @@
   "item.joebenite.joebenite": "Joebenite",
   "block.joebenite.joebenite_ore": "Joebenite Ore",
   "block.joebenite.block_of_joebenite": "Block of Joebenite",
+  
   "item.joebenite.joebenite_pickaxe": "Joebenite Pickaxe",
   "item.joebenite.joebenite_sword": "Joebenite Sword",
   "item.joebenite.joebenite_axe": "Joebenite Axe",
   "item.joebenite.joebenite_shovel": "Joebenite Shovel",
-  "item.joebenite.joebenite_hoe": "Joebenite Hoe"
+  "item.joebenite.joebenite_hoe": "Joebenite Hoe",
+
+  "item.joebenite.joebenite_helmet": "Joebenite Helmet",
+  "item.joebenite.joebenite_chestplate": "Joebenite Chestplate",
+  "item.joebenite.joebenite_leggings": "Joebenite Leggings",
+  "item.joebenite.joebenite_boots": "Joebenite Boots"
 }

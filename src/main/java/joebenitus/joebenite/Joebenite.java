@@ -11,6 +11,8 @@ import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
+import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -34,7 +36,7 @@ public class Joebenite implements ModInitializer {
 
 	public static final Block JOEBENITE_ORE = new JoebeniteOreBlock(FabricBlockSettings.copy(Blocks.STONE));
 
-	//public static final Item JOEBENITE_PICKAXE = new Item(new Item.Settings().group(ItemGroup.TOOLS));
+	public static final ArmorMaterial JOEBENITE_ARMOR = new ArmorMaterialJoebenite();
 
 	private static ConfiguredFeature<?, ?> JOEBENITE_ORE_OVERWORLD = Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, JOEBENITE_ORE.getDefaultState(), 4)).decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(0, 0, 20))).spreadHorizontally().repeat(1);
 
@@ -55,6 +57,12 @@ public class Joebenite implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("joebenite", "joebenite_shovel"), new ShovelBase(new ToolMaterialJoebenite()));
 		Registry.register(Registry.ITEM, new Identifier("joebenite", "joebenite_hoe"), new HoeBase(new ToolMaterialJoebenite()));
 
+		//ARMOR
+
+		Registry.register(Registry.ITEM, new Identifier("joebenite", "joebenite_helmet"), new ArmorBase(JOEBENITE_ARMOR, EquipmentSlot.HEAD));
+		Registry.register(Registry.ITEM, new Identifier("joebenite", "joebenite_chestplate"), new ArmorBase(JOEBENITE_ARMOR, EquipmentSlot.CHEST));
+		Registry.register(Registry.ITEM, new Identifier("joebenite", "joebenite_leggings"), new ArmorBase(JOEBENITE_ARMOR, EquipmentSlot.LEGS));
+		Registry.register(Registry.ITEM, new Identifier("joebenite", "joebenite_boots"), new ArmorBase(JOEBENITE_ARMOR, EquipmentSlot.FEET ));
 
 		RegistryKey<ConfiguredFeature<?,?>> joebeniteOreOverworld = RegistryKey.of(Registry.CONFIGURED_FEATURE_WORLDGEN, new Identifier("joebenite", "joebenite_ore"));
 
